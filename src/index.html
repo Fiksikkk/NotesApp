@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Note App</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://kit.fontawesome.com/9d27190fec.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <table id="items" class="notes">
+        <div class="title">
+            <span>Notes</span>
+        </div>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Created</th>
+                <th>Category</th>
+                <th>Content</th>
+                <th>Dates</th>
+                <th>
+                    <button> Archive</button>
+                    <button onclick={deleteItem} id="btnDelete">Delete</button>
+                </th>
+            </tr>
+        </thead>
+        <tbody id="tbody">
+        </tbody>
+    </table>
+    <div class="addNoteButt">
+        <button class="addNote">
+            Create a new note
+        </button>
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>Note Category</th>
+                <th>Active</th>
+                <th>Archived</th>
+            </tr>
+        </thead>
+        <tbody class="counting" id="counting">
+
+        </tbody>
+    </table>
+
+    <div>
+        <div class="title">
+            <span>Archived Notes</span>
+        </div>
+        <table id="archive" class="notes">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Created</th>
+                    <th>Category</th>
+                    <th>Content</th>
+                    <th>Dates</th>
+                    <th>
+                        <button> Unarchive</button>
+                        <button onclick={deleteItem} id="btnDelete">Delete</button>
+                    </th>
+                </tr>
+            </thead>
+            <tbody id="archiveBody">
+            </tbody>
+        </table>
+    </div>
+</body>
+<script type="module" src="./index.js"></script>
+
+
+</html>
